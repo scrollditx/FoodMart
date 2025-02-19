@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*! Root Variables */
+:root {
+    --body-font: "Open Sans" ;
+    --heading-font: "Nunito";
+    --accent-color: #FFC43F;
+    --dark-color: #222222;
+    --light-dark-color: #727272;
+    --light-color: #fff;
+    --grey-color: #dbdbdb;
+    --light-grey-color: #fafafa;
+    --primary-color: #6995B1;
+    --light-primary-color: #eef1f3;
+}

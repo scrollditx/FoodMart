@@ -1,0 +1,94 @@
+<!--TODO https://themewagon.github.io/FoodMart/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoodMart - Free eCommerce Grocery Store HTML Website Template</title>
+    <!--! Font Attachment Link  -->
+    <link rel="stylesheet" href="./Assets/CSS/stylesheet.css" />
+    <!--! Icon Attachment-Font Awesome -->
+    <link rel="stylesheet" href="./Assets/CSS/all.min.css" />
+    <!--! Bootstrap Attachment Link -->
+    <link rel="stylesheet" href="./Assets/CSS/bootstrap.min.css" />
+    <!--! Custom Css Attachment Link  -->
+    <link rel="stylesheet" href="./Assets/CSS/styles.css" />
+    <!--! Media Query Attachment Link -->
+    <link rel="stylesheet" href="./Assets/CSS/media.css" />
+  </head>
+  <body>
+    <header>
+      <!--! Contact Start  -->
+      <div
+        class="top-bar d-flex bg-warning justify-content-between p-2 border-dark-subtle"
+      >
+        <div class="contact-info ms-2 fs-6 fw-semibold">
+          <a href="index.html" class="text-decoration-none">
+            <span class="d-inline-block me-3 text-dark">
+              <i class="fa-solid fa-phone me-1"></i>
+              +98034984089
+            </span>
+
+            <span class="d-inline-block me-3 text-dark">
+              <i class="fa-solid fa-envelope me-1"></i>
+              foodmart@example.com
+            </span>
+          </a>
+        </div>
+        <!--! Personal Info -->
+        <div class="personal-info me-2 fs-6 fw-semibold">
+          <a href="#" class="text-decoration-none">
+            <span class="d-inline-block me-3 text-dark">
+              <i class="fa-solid fa-user me-1"></i>
+              Login/Register
+            </span>
+
+            <span class="d-inline-block me-3 text-dark">
+              <i class="fa-solid fa-heart me-1"></i>
+              Wishlist
+            </span>
+          </a>
+        </div>
+      </div>
+      <!--TODO Navbar  -->
+      <div class="container-fluid py-2 bg-light px-2">
+        <nav class="d-flex align-items-center justify-content-between g-4">
+          <a href="index.html" class="navbar-brand">
+            <img src="./Assets/IMGS/logo.png" alt="logo">
+          </a>
+      
+          <div class="row bg-light rounded-4 flex-grow-1 m-0">
+            <div class="col-md-3 d-none d-md-block">
+              <select class="form-select border-0 bg-transparent">
+                <option>All Categories</option>
+                <option>Groceries</option>
+                <option>Drinks</option>
+                <option>Chocolates</option>
+              </select>
+            </div>
+            <div class="col-11 col-md-7 d-flex align-items-center">
+              <form id="search-form" class="w-75 d-flex align-items-center">
+                <input 
+                  type="text" 
+                  class="form-control border-0 bg-transparent" 
+                  placeholder="Search for more than 20,000 products"
+                >
+                <button type="submit" class="border-0 bg-transparent ms-2">
+                  <i class="fa-solid fa-magnifying-glass fs-5"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="text-end d-none d-lg-block dropdown me-2">
+            <button class="border-0 bg-transparent d-flex flex-column g-2 lh-1" type="button">
+              <span class="fs-6 text-muted dropdown-toggle">Your Cart</span>
+              <span class="fs-5 fw-bold">$1290.00</span>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <script src="./Assets/JS/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
