@@ -19,76 +19,1623 @@
   </head>
   <body>
     <header>
-      <!--! Contact Start  -->
-      <div
-        class="top-bar d-flex bg-warning justify-content-between p-2 border-dark-subtle"
-      >
-        <div class="contact-info ms-2 fs-6 fw-semibold">
-          <a href="index.html" class="text-decoration-none">
-            <span class="d-inline-block me-3 text-dark">
-              <i class="fa-solid fa-phone me-1"></i>
-              +98034984089
-            </span>
+      <!-- Top Bar -->
+      <div class="py-2 bg-light">
+        <div class="container-fluid">
+          <div
+            class="d-flex flex-column flex-sm-row justify-content-between align-items-center"
+          >
+            <!-- Contact Info -->
+            <div>
+              <a
+                href="tel:+98034984089"
+                class="text-muted text-decoration-none me-3 hover-primary"
+              >
+                <i class="fa-solid fa-phone me-1"></i>
+                <span class="d-none d-md-inline">+98034984089</span>
+              </a>
+              <a
+                href="mailto:foodmart@example.com"
+                class="text-muted text-decoration-none hover-primary"
+              >
+                <i class="fa-solid fa-envelope me-1"></i>
+                <span>foodmart@example.com</span>
+              </a>
+            </div>
 
-            <span class="d-inline-block me-3 text-dark">
-              <i class="fa-solid fa-envelope me-1"></i>
-              foodmart@example.com
-            </span>
-          </a>
-        </div>
-        <!--! Personal Info -->
-        <div class="personal-info me-2 fs-6 fw-semibold">
-          <a href="#" class="text-decoration-none">
-            <span class="d-inline-block me-3 text-dark">
-              <i class="fa-solid fa-user me-1"></i>
-              Login/Register
-            </span>
-
-            <span class="d-inline-block me-3 text-dark">
-              <i class="fa-solid fa-heart me-1"></i>
-              Wishlist
-            </span>
-          </a>
+            <!-- User Actions -->
+            <div class="user-actions">
+              <a
+                href="#"
+                class="text-muted text-decoration-none me-3 hover-primary"
+              >
+                <i class="fa-solid fa-user me-1"></i>
+                <span>Login/Register</span>
+              </a>
+              <a
+                href="#"
+                class="text-muted text-decoration-none d-none d-md-inline hover-primary"
+              >
+                <i class="fa-solid fa-heart me-1"></i>
+                <span>Wishlist</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-      <!--TODO Navbar  -->
-      <div class="container-fluid py-2 bg-light px-2">
-        <nav class="d-flex align-items-center justify-content-between g-4">
-          <a href="index.html" class="navbar-brand">
-            <img src="./Assets/IMGS/logo.png" alt="logo">
+
+      <!-- Main Navbar -->
+      <nav class="navbar navbar-expand-lg py-3 bg-white">
+        <div class="container-fluid">
+          <!-- Logo -->
+          <a class="navbar-brand" href="#">
+            <img src="./Assets/IMGS/logo.png" alt="FoodMart Logo" height="40" />
           </a>
-      
-          <div class="row bg-light rounded-4 flex-grow-1 m-0">
-            <div class="col-md-3 d-none d-md-block">
-              <select class="form-select border-0 bg-transparent">
-                <option>All Categories</option>
-                <option>Groceries</option>
-                <option>Drinks</option>
-                <option>Chocolates</option>
-              </select>
+
+          <!-- Search Bar -->
+          <div class="flex-grow-1 mx-lg-4">
+            <div class="row g-0 bg-light rounded-4">
+              <div class="col-md-3 d-none d-md-block">
+                <select class="form-select border-0 bg-transparent py-2">
+                  <option selected>All Categories</option>
+                  <option>Groceries</option>
+                  <option>Drinks</option>
+                  <option>Chocolates</option>
+                </select>
+              </div>
+              <div class="col">
+                <form class="d-flex">
+                  <input
+                    type="search"
+                    class="form-control border-0 bg-transparent py-2"
+                    placeholder="Search for more than 20,000 products"
+                  />
+                  <button class="btn btn-success" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </form>
+              </div>
             </div>
-            <div class="col-11 col-md-7 d-flex align-items-center">
-              <form id="search-form" class="w-75 d-flex align-items-center">
-                <input 
-                  type="text" 
-                  class="form-control border-0 bg-transparent" 
-                  placeholder="Search for more than 20,000 products"
+          </div>
+
+          <!-- Cart -->
+          <div class="d-flex align-items-center ms-auto">
+            <div class="cart-info text-end me-3 d-none d-sm-block">
+              <span class="text-muted small">Your Cart</span>
+              <div class="fw-bold text-success">$1290.00</div>
+            </div>
+            <button class="btn btn-outline-success rounded-circle p-2 cart-btn">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Category Navbar -->
+      <nav
+        class="navbar navbar-expand-lg border-top border-bottom py-0 bg-white"
+      >
+        <div class="container-fluid position-relative">
+          <!-- Departments Menu -->
+          <div class="dropdown category-dropdown">
+            <button
+              class="btn dropdown-toggle px-4 py-3"
+              type="button"
+              data-bs-toggle="dropdown"
+            >
+              <i class="fa-solid fa-bars me-2"></i>
+              Departments
+            </button>
+            <ul class="dropdown-menu rounded-3 border-0 shadow-sm">
+              <li>
+                <a class="dropdown-item py-2" href="#">Fresh Vegetables</a>
+              </li>
+              <li><a class="dropdown-item py-2" href="#">Fresh Fruits</a></li>
+              <li><a class="dropdown-item py-2" href="#">Meat & Fish</a></li>
+              <li><a class="dropdown-item py-2" href="#">Dairy & Eggs</a></li>
+            </ul>
+          </div>
+
+          <!-- Navigation Menu -->
+          <div class="collapse navbar-collapse position-static" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active px-3" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="#">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="#">Categories</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle px-3"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  >Pages</a
                 >
-                <button type="submit" class="border-0 bg-transparent ms-2">
-                  <i class="fa-solid fa-magnifying-glass fs-5"></i>
+                <ul class="dropdown-menu border-0 shadow-sm">
+                  <li><a class="dropdown-item py-2" href="#">About Us</a></li>
+                  <li><a class="dropdown-item py-2" href="#">Contact</a></li>
+                  <li><a class="dropdown-item py-2" href="#">FAQ</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-3" href="#">Blog</a>
+              </li>
+            </ul>
+          </div>
+
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <!--! Hero's Section -->
+    <section class="hero-section py-5">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Main Banner -->
+          <div class="col-12">
+            <div class="main-banner bg-info-subtle p-4 p-lg-5 rounded-4">
+              <div class="row align-items-center">
+                <div class="col-lg-7 mb-4 mb-lg-0">
+                  <span class="text-success fw-bold text-uppercase"
+                    >100% natural</span
+                  >
+                  <h1 class="display-4 fw-bold my-3">
+                    Fresh Smoothie & Summer Juice
+                  </h1>
+                  <p class="lead mb-4">
+                    Discover our refreshing selection of natural smoothies and
+                    juices, perfect for the summer season.
+                  </p>
+                  <a href="#" class="btn btn-success btn-lg px-4 rounded-pill">
+                    Shop Now
+                    <i class="fas fa-arrow-right ms-2"></i>
+                  </a>
+                </div>
+                <div class="col-lg-5">
+                  <img
+                    src="./Assets/IMGS/product-thumb-1.png"
+                    class="img-fluid banner-image"
+                    alt="Smoothie"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Promo Banners -->
+          <div class="col-md-6">
+            <div
+              class="promo-banner bg-success-subtle rounded-4 position-relative overflow-hidden h-100"
+            >
+              <div class="banner-content p-4 p-lg-5">
+                <span
+                  class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill"
+                  >20% off</span
+                >
+                <h3 class="h2 mb-3 text-dark">Fresh Fruits & Vegetables</h3>
+                <a href="#" class="btn btn-light rounded-pill px-4">
+                  Shop Collection <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+              </div>
+              <img
+                src="./Assets/IMGS/ad-image-1.png"
+                class="banner-image position-absolute end-0 bottom-0"
+                alt="Fruits & Vegetables"
+              />
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div
+              class="promo-banner bg-danger-subtle rounded-4 position-relative overflow-hidden h-100"
+            >
+              <div class="banner-content p-4 p-lg-5">
+                <span
+                  class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill"
+                  >15% off</span
+                >
+                <h3 class="h2 mb-3 text-dark">Fresh Baked Products</h3>
+                <a href="#" class="btn btn-light rounded-pill px-4">
+                  Shop Collection <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+              </div>
+              <img
+                src="./Assets/IMGS/ad-image-2.png"
+                class="banner-image position-absolute end-0 bottom-0"
+                alt="Baked Products"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--! Category -->
+    <section class="py-5 overflow-hidden">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+              <h2 class="mb-0">Category</h2>
+              <div class="d-flex align-items-center gap-3">
+                <a href="#" class="text-decoration-none text-muted"
+                  >View All Categories →</a
+                >
+                <div class="navigation-buttons">
+                  <button
+                    class="btn btn-light rounded-circle border me-2"
+                    disabled
+                  >
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </button>
+                  <button class="btn btn-light rounded-circle border">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Category Cards -->
+        <div class="row mb-4">
+          <div class="col-12">
+            <div
+              class="d-flex gap-4 overflow-auto pb-3 justify-content-evenly align-items-center category-wrapper"
+            >
+              <!-- Category Items -->
+              <div
+                class="card bg-white category-card border-0 text-center"
+                style="min-width: 200px; height: 180px"
+              >
+                <a
+                  href="index.html"
+                  class="text-decoration-none text-dark h-100"
+                >
+                  <div
+                    class="card-body d-flex flex-column justify-content-center align-items-center p-3"
+                  >
+                    <img
+                      src="./Assets/IMGS/icon-vegetables-broccoli.png"
+                      alt="Category Thumbnail"
+                      class="mb-3 category-icon"
+                      width="40"
+                      height="40"
+                    />
+                    <h3 class="card-title h6 mb-0">Fruits & Veges</h3>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="card bg-white category-card border-0 text-center"
+                style="min-width: 200px; height: 180px"
+              >
+                <a
+                  href="index.html"
+                  class="text-decoration-none text-dark h-100"
+                >
+                  <div
+                    class="card-body d-flex flex-column justify-content-center align-items-center p-3"
+                  >
+                    <img
+                      src="./Assets/IMGS/icon-bread-baguette.png"
+                      alt="Category Thumbnail"
+                      class="mb-3 category-icon"
+                      width="40"
+                      height="40"
+                    />
+                    <h3 class="card-title h6 mb-0">Fruits & Veges</h3>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="card bg-white category-card border-0 text-center"
+                style="min-width: 200px; height: 180px"
+              >
+                <a
+                  href="index.html"
+                  class="text-decoration-none text-dark h-100"
+                >
+                  <div
+                    class="card-body d-flex flex-column justify-content-center align-items-center p-3"
+                  >
+                    <img
+                      src="./Assets/IMGS/icon-soft-drinks-bottle.png"
+                      alt="Category Thumbnail"
+                      class="mb-3 category-icon"
+                      width="40"
+                      height="40"
+                    />
+                    <h3 class="card-title h6 mb-0">Fruits & Veges</h3>
+                  </div>
+                </a>
+              </div>
+              <div
+                class="card bg-white category-card border-0 text-center"
+                style="min-width: 200px; height: 180px"
+              >
+                <a
+                  href="index.html"
+                  class="text-decoration-none text-dark h-100"
+                >
+                  <div
+                    class="card-body d-flex flex-column justify-content-center align-items-center p-3"
+                  >
+                    <img
+                      src="./Assets/IMGS/icon-wine-glass-bottle.png"
+                      alt="Category Thumbnail"
+                      class="mb-3 category-icon"
+                      width="40"
+                      height="40"
+                    />
+                    <h3 class="card-title h6 mb-0">Fruits & Veges</h3>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--! Brands  -->
+    <section>
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+              <h2 class="mb-0">Newly Arrived Brands</h2>
+              <div class="d-flex align-items-center gap-3">
+                <a href="#" class="text-decoration-none text-muted"
+                  >View All Categories →</a
+                >
+                <div>
+                  <button
+                    class="btn btn-light rounded-circle border me-2"
+                    disabled
+                  >
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </button>
+                  <button class="btn btn-light rounded-circle border">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-4">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+            <div class="card mb-3 p-3 rounded-4 shadow border-0">
+              <div class="row g-0 align-items-center">
+                <div class="col-4">
+                  <img
+                    src="./Assets/IMGS/product-thumb-11.jpg"
+                    class="img-fluid rounded"
+                    alt="Honey Jar"
+                  />
+                </div>
+                <div class="col-8">
+                  <div class="card-body py-0">
+                    <p class="text-muted mb-1 small">Amber Jar</p>
+                    <h5 class="card-title h6 mb-0">
+                      Honey best nectar you wish to get
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-4">
+            <div class="card mb-3 p-3 rounded-4 shadow border-0">
+              <div class="row g-0 align-items-center">
+                <div class="col-4">
+                  <img
+                    src="./Assets/IMGS/product-thumb-12.jpg"
+                    class="img-fluid rounded"
+                    alt="Fresh Fruits"
+                  />
+                </div>
+                <div class="col-8">
+                  <div class="card-body py-0">
+                    <p class="text-muted mb-1 small">Fresh Collection</p>
+                    <h5 class="card-title h6 mb-0">
+                      Fresh seasonal fruits ready to deliver
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-4">
+            <div class="card mb-3 p-3 rounded-4 shadow border-0">
+              <div class="row g-0 align-items-center">
+                <div class="col-4">
+                  <img
+                    src="./Assets/IMGS/product-thumb-13.jpg"
+                    class="img-fluid rounded"
+                    alt="Vegetable Box"
+                  />
+                </div>
+                <div class="col-8">
+                  <div class="card-body py-0">
+                    <p class="text-muted mb-1 small">Value Pack</p>
+                    <h5 class="card-title h6 mb-0">
+                      Fresh vegetable box for your kitchen
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--! Trendy -->
+    <section class="py-5">
+      <div class="container">
+        <!-- Section with Tabs -->
+        <div
+          class="d-flex justify-content-between align-items-center border-bottom mb-4"
+        >
+          <h2 class="h3 mb-0">Trending Products</h2>
+          <ul class="nav nav-tabs border-0">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="tab" href="#">All</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#"
+                >Fruits & Veges</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="tab" href="#">Juices</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tab Content -->
+        <div>
+          <div class="fade show active">
+            <div class="row g-4">
+              <!-- First Row -->
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="position-relative ratio ratio-1x1">
+                    <span class="badge position-absolute top-0 start-0 m-3"
+                      >-30%</span
+                    >
+                    <button
+                      class="btn position-absolute top-0 end-0 m-3 rounded-circle p-2"
+                    >
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <img
+                      src="./Assets/IMGS/thumb-bananas.png"
+                      class="p-3 img-fluid object-fit-contain"
+                      alt="Product"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title h6">Sunstar Fresh Melon Juice</h5>
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2"
+                    >
+                      <span class="text-muted small">1 Unit</span>
+                      <span class="text-warning">
+                        <i class="fa-solid fa-star"></i>
+                        <span class="text-dark ms-1">4.5</span>
+                      </span>
+                    </div>
+                    <p class="fs-5 fw-bold text-success mb-3">$18.00</p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div
+                        class="input-group input-group-sm"
+                        style="width: 100px"
+                      >
+                        <button class="btn btn-outline-secondary" type="button">
+                          -
+                        </button>
+                        <input
+                          type="text"
+                          class="form-control text-center"
+                          value="1"
+                        />
+                        <button class="btn btn-outline-secondary" type="button">
+                          +
+                        </button>
+                      </div>
+                      <button class="btn btn-primary">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="position-relative ratio ratio-1x1">
+                    <span class="badge position-absolute top-0 start-0 m-3"
+                      >-30%</span
+                    >
+                    <button
+                      class="btn position-absolute top-0 end-0 m-3 rounded-circle p-2"
+                    >
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <img
+                      src="./Assets/IMGS/thumb-biscuits.png"
+                      class="p-3 img-fluid object-fit-contain"
+                      alt="Product"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title h6">Sunstar Fresh Melon Juice</h5>
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2"
+                    >
+                      <span class="text-muted small">1 Unit</span>
+                      <span class="text-warning">
+                        <i class="fa-solid fa-star"></i>
+                        <span class="text-dark ms-1">4.5</span>
+                      </span>
+                    </div>
+                    <p class="fs-5 fw-bold text-success mb-3">$18.00</p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div
+                        class="input-group input-group-sm"
+                        style="width: 100px"
+                      >
+                        <button class="btn btn-outline-secondary" type="button">
+                          -
+                        </button>
+                        <input
+                          type="text"
+                          class="form-control text-center"
+                          value="1"
+                        />
+                        <button class="btn btn-outline-secondary" type="button">
+                          +
+                        </button>
+                      </div>
+                      <button class="btn btn-primary">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="position-relative ratio ratio-1x1">
+                    <span class="badge position-absolute top-0 start-0 m-3"
+                      >-30%</span
+                    >
+                    <button
+                      class="btn position-absolute top-0 end-0 m-3 rounded-circle p-2"
+                    >
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <img
+                      src="./Assets/IMGS/thumb-cucumber.png"
+                      class="p-3 img-fluid object-fit-contain"
+                      alt="Product"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title h6">Sunstar Fresh Melon Juice</h5>
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2"
+                    >
+                      <span class="text-muted small">1 Unit</span>
+                      <span class="text-warning">
+                        <i class="fa-solid fa-star"></i>
+                        <span class="text-dark ms-1">4.5</span>
+                      </span>
+                    </div>
+                    <p class="fs-5 fw-bold text-success mb-3">$18.00</p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div
+                        class="input-group input-group-sm"
+                        style="width: 100px"
+                      >
+                        <button class="btn btn-outline-secondary" type="button">
+                          -
+                        </button>
+                        <input
+                          type="text"
+                          class="form-control text-center"
+                          value="1"
+                        />
+                        <button class="btn btn-outline-secondary" type="button">
+                          +
+                        </button>
+                      </div>
+                      <button class="btn btn-primary">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="position-relative ratio ratio-1x1">
+                    <span class="badge position-absolute top-0 start-0 m-3"
+                      >-30%</span
+                    >
+                    <button
+                      class="btn position-absolute top-0 end-0 m-3 rounded-circle p-2"
+                    >
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <img
+                      src="./Assets/IMGS/thumb-milk.png"
+                      class="p-3 img-fluid object-fit-contain"
+                      alt="Product"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title h6">Sunstar Fresh Melon Juice</h5>
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2"
+                    >
+                      <span class="text-muted small">1 Unit</span>
+                      <span class="text-warning">
+                        <i class="fa-solid fa-star"></i>
+                        <span class="text-dark ms-1">4.5</span>
+                      </span>
+                    </div>
+                    <p class="fs-5 fw-bold text-success mb-3">$18.00</p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div
+                        class="input-group input-group-sm"
+                        style="width: 100px"
+                      >
+                        <button class="btn btn-outline-secondary" type="button">
+                          -
+                        </button>
+                        <input
+                          type="text"
+                          class="form-control text-center"
+                          value="1"
+                        />
+                        <button class="btn btn-outline-secondary" type="button">
+                          +
+                        </button>
+                      </div>
+                      <button class="btn btn-primary">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="position-relative ratio ratio-1x1">
+                    <span class="badge position-absolute top-0 start-0 m-3"
+                      >-30%</span
+                    >
+                    <button
+                      class="btn position-absolute top-0 end-0 m-3 rounded-circle p-2"
+                    >
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <img
+                      src="./Assets/IMGS/thumb-milk.png"
+                      class="p-3 img-fluid object-fit-contain"
+                      alt="Product"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title h6">Sunstar Fresh Melon Juice</h5>
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2"
+                    >
+                      <span class="text-muted small">1 Unit</span>
+                      <span class="text-warning">
+                        <i class="fa-solid fa-star"></i>
+                        <span class="text-dark ms-1">4.5</span>
+                      </span>
+                    </div>
+                    <p class="fs-5 fw-bold text-success mb-3">$18.00</p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div
+                        class="input-group input-group-sm"
+                        style="width: 100px"
+                      >
+                        <button class="btn btn-outline-secondary" type="button">
+                          -
+                        </button>
+                        <input
+                          type="text"
+                          class="form-control text-center"
+                          value="1"
+                        />
+                        <button class="btn btn-outline-secondary" type="button">
+                          +
+                        </button>
+                      </div>
+                      <button class="btn btn-primary">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Second Row  -->
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="position-relative ratio ratio-1x1">
+                    <span class="badge position-absolute top-0 start-0 m-3"
+                      >-30%</span
+                    >
+                    <button
+                      class="btn position-absolute top-0 end-0 m-3 rounded-circle p-2"
+                    >
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <img
+                      src="./Assets/IMGS/thumb-bananas.png"
+                      class="p-3 img-fluid object-fit-contain"
+                      alt="Product"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title h6">Sunstar Fresh Melon Juice</h5>
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2"
+                    >
+                      <span class="text-muted small">1 Unit</span>
+                      <span class="text-warning">
+                        <i class="fa-solid fa-star"></i>
+                        <span class="text-dark ms-1">4.5</span>
+                      </span>
+                    </div>
+                    <p class="fs-5 fw-bold text-success mb-3">$18.00</p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div
+                        class="input-group input-group-sm"
+                        style="width: 100px"
+                      >
+                        <button class="btn btn-outline-secondary" type="button">
+                          -
+                        </button>
+                        <input
+                          type="text"
+                          class="form-control text-center"
+                          value="1"
+                        />
+                        <button class="btn btn-outline-secondary" type="button">
+                          +
+                        </button>
+                      </div>
+                      <button class="btn btn-primary">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="position-relative ratio ratio-1x1">
+                    <span class="badge position-absolute top-0 start-0 m-3"
+                      >-30%</span
+                    >
+                    <button
+                      class="btn position-absolute top-0 end-0 m-3 rounded-circle p-2"
+                    >
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <img
+                      src="./Assets/IMGS/thumb-biscuits.png"
+                      class="p-3 img-fluid object-fit-contain"
+                      alt="Product"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title h6">Sunstar Fresh Melon Juice</h5>
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2"
+                    >
+                      <span class="text-muted small">1 Unit</span>
+                      <span class="text-warning">
+                        <i class="fa-solid fa-star"></i>
+                        <span class="text-dark ms-1">4.5</span>
+                      </span>
+                    </div>
+                    <p class="fs-5 fw-bold text-success mb-3">$18.00</p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div
+                        class="input-group input-group-sm"
+                        style="width: 100px"
+                      >
+                        <button class="btn btn-outline-secondary" type="button">
+                          -
+                        </button>
+                        <input
+                          type="text"
+                          class="form-control text-center"
+                          value="1"
+                        />
+                        <button class="btn btn-outline-secondary" type="button">
+                          +
+                        </button>
+                      </div>
+                      <button class="btn btn-primary">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="position-relative ratio ratio-1x1">
+                    <span class="badge position-absolute top-0 start-0 m-3"
+                      >-30%</span
+                    >
+                    <button
+                      class="btn position-absolute top-0 end-0 m-3 rounded-circle p-2"
+                    >
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <img
+                      src="./Assets/IMGS/thumb-cucumber.png"
+                      class="p-3 img-fluid object-fit-contain"
+                      alt="Product"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title h6">Sunstar Fresh Melon Juice</h5>
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2"
+                    >
+                      <span class="text-muted small">1 Unit</span>
+                      <span class="text-warning">
+                        <i class="fa-solid fa-star"></i>
+                        <span class="text-dark ms-1">4.5</span>
+                      </span>
+                    </div>
+                    <p class="fs-5 fw-bold text-success mb-3">$18.00</p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div
+                        class="input-group input-group-sm"
+                        style="width: 100px"
+                      >
+                        <button class="btn btn-outline-secondary" type="button">
+                          -
+                        </button>
+                        <input
+                          type="text"
+                          class="form-control text-center"
+                          value="1"
+                        />
+                        <button class="btn btn-outline-secondary" type="button">
+                          +
+                        </button>
+                      </div>
+                      <button class="btn btn-primary">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="position-relative ratio ratio-1x1">
+                    <span class="badge position-absolute top-0 start-0 m-3"
+                      >-30%</span
+                    >
+                    <button
+                      class="btn position-absolute top-0 end-0 m-3 rounded-circle p-2"
+                    >
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <img
+                      src="./Assets/IMGS/thumb-milk.png"
+                      class="p-3 img-fluid object-fit-contain"
+                      alt="Product"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title h6">Sunstar Fresh Melon Juice</h5>
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2"
+                    >
+                      <span class="text-muted small">1 Unit</span>
+                      <span class="text-warning">
+                        <i class="fa-solid fa-star"></i>
+                        <span class="text-dark ms-1">4.5</span>
+                      </span>
+                    </div>
+                    <p class="fs-5 fw-bold text-success mb-3">$18.00</p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div
+                        class="input-group input-group-sm"
+                        style="width: 100px"
+                      >
+                        <button class="btn btn-outline-secondary" type="button">
+                          -
+                        </button>
+                        <input
+                          type="text"
+                          class="form-control text-center"
+                          value="1"
+                        />
+                        <button class="btn btn-outline-secondary" type="button">
+                          +
+                        </button>
+                      </div>
+                      <button class="btn btn-primary">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="position-relative ratio ratio-1x1">
+                    <span class="badge position-absolute top-0 start-0 m-3"
+                      >-30%</span
+                    >
+                    <button
+                      class="btn position-absolute top-0 end-0 m-3 rounded-circle p-2"
+                    >
+                      <i class="fa-regular fa-heart"></i>
+                    </button>
+                    <img
+                      src="./Assets/IMGS/thumb-milk.png"
+                      class="p-3 img-fluid object-fit-contain"
+                      alt="Product"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title h6">Sunstar Fresh Melon Juice</h5>
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2"
+                    >
+                      <span class="text-muted small">1 Unit</span>
+                      <span class="text-warning">
+                        <i class="fa-solid fa-star"></i>
+                        <span class="text-dark ms-1">4.5</span>
+                      </span>
+                    </div>
+                    <p class="fs-5 fw-bold text-success mb-3">$18.00</p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div
+                        class="input-group input-group-sm"
+                        style="width: 100px"
+                      >
+                        <button class="btn btn-outline-secondary" type="button">
+                          -
+                        </button>
+                        <input
+                          type="text"
+                          class="form-control text-center"
+                          value="1"
+                        />
+                        <button class="btn btn-outline-secondary" type="button">
+                          +
+                        </button>
+                      </div>
+                      <button class="btn btn-primary">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--! Sale -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row g-4">
+          <!-- First Banner -->
+          <div class="col-md-6">
+            <div
+              class="card border-0 bg-primary text-white overflow-hidden h-100"
+            >
+              <div
+                class="card-body p-4 p-lg-5 position-relative"
+                style="z-index: 2"
+              >
+                <span
+                  class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill"
+                  >25% Off</span
+                >
+                <h3 class="h2 mb-3">Luxa Dark Chocolate</h3>
+                <p class="mb-4 text-white-50">
+                  Very tasty & creamy vanilla flavour creamy muffins.
+                </p>
+                <a href="#" class="btn btn-light rounded-pill px-4">
+                  Shop Now
+                  <i class="fa-solid fa-arrow-right ms-2"></i>
+                </a>
+                <img
+                  src="./Assets/IMGS/ad-image-3.png"
+                  class="position-absolute end-0 bottom-0 h-100 object-fit-cover"
+                  style="z-index: 1; transform: translateX(20%)"
+                  alt="Chocolate"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Banner -->
+          <div class="col-md-6">
+            <div class="card border-0 bg-info text-white overflow-hidden h-100">
+              <div
+                class="card-body p-4 p-lg-5 position-relative"
+                style="z-index: 2"
+              >
+                <span
+                  class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill"
+                  >25% Off</span
+                >
+                <h3 class="h2 mb-3">Creamy Muffins</h3>
+                <p class="mb-4 text-white-50">
+                  Very tasty & creamy vanilla flavour creamy muffins.
+                </p>
+                <a href="#" class="btn btn-light rounded-pill px-4">
+                  Shop Now
+                  <i class="fa-solid fa-arrow-right ms-2"></i>
+                </a>
+                <img
+                  src="./Assets/IMGS/ad-image-4.png"
+                  class="position-absolute end-0 bottom-0 h-100 object-fit-cover"
+                  style="z-index: 1; transform: translateX(20%)"
+                  alt="Muffins"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--! Best selling -->
+    <section>
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+              <h2 class="mb-0">Best Selling products</h2>
+              <div class="d-flex align-items-center gap-3">
+                <a href="#" class="text-decoration-none text-muted"
+                  >View All Categories →</a
+                >
+                <div class="navigation-buttons">
+                  <button
+                    class="btn btn-light rounded-circle border me-2"
+                    disabled
+                  >
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </button>
+                  <button class="btn btn-light rounded-circle border">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="row g-4"
+        >
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="position-relative ratio ratio-1x1">
+                <span class="badge position-absolute top-0 start-0 m-3"
+                  >-30%</span
+                >
+                <button
+                  class="btn position-absolute top-0 end-0 m-3 rounded-circle p-2"
+                >
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+                <img
+                  src="./Assets/IMGS/thumb-tomatoes.png"
+                  class="p-3 img-fluid object-fit-contain"
+                  alt="Product"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title h6">Sunstar Fresh Melon Juice</h5>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span class="text-muted small">1 Unit</span>
+                  <span class="text-warning">
+                    <i class="fa-solid fa-star"></i>
+                    <span class="text-dark ms-1">4.5</span>
+                  </span>
+                </div>
+                <p class="fs-5 fw-bold text-success mb-3">$18.00</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="input-group input-group-sm" style="width: 100px">
+                    <button class="btn btn-outline-secondary" type="button">
+                      -
+                    </button>
+                    <input
+                      type="text"
+                      class="form-control text-center"
+                      value="1"
+                    />
+                    <button class="btn btn-outline-secondary" type="button">
+                      +
+                    </button>
+                  </div>
+                  <button class="btn btn-primary">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="position-relative ratio ratio-1x1">
+                <span class="badge position-absolute top-0 start-0 m-3"
+                  >-30%</span
+                >
+                <button
+                  class="btn position-absolute top-0 end-0 m-3 rounded-circle p-2"
+                >
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+                <img
+                  src="./Assets/IMGS/thumb-tomatoketchup.png"
+                  class="p-3 img-fluid object-fit-contain"
+                  alt="Product"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title h6">Sunstar Fresh Melon Juice</h5>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span class="text-muted small">1 Unit</span>
+                  <span class="text-warning">
+                    <i class="fa-solid fa-star"></i>
+                    <span class="text-dark ms-1">4.5</span>
+                  </span>
+                </div>
+                <p class="fs-5 fw-bold text-success mb-3">$18.00</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="input-group input-group-sm" style="width: 100px">
+                    <button class="btn btn-outline-secondary" type="button">
+                      -
+                    </button>
+                    <input
+                      type="text"
+                      class="form-control text-center"
+                      value="1"
+                    />
+                    <button class="btn btn-outline-secondary" type="button">
+                      +
+                    </button>
+                  </div>
+                  <button class="btn btn-primary">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="position-relative ratio ratio-1x1">
+                <span class="badge position-absolute top-0 start-0 m-3"
+                  >-30%</span
+                >
+                <button
+                  class="btn position-absolute top-0 end-0 m-3 rounded-circle p-2"
+                >
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+                <img
+                  src="./Assets/IMGS/thumb-milk.png"
+                  class="p-3 img-fluid object-fit-contain"
+                  alt="Product"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title h6">Sunstar Fresh Melon Juice</h5>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span class="text-muted small">1 Unit</span>
+                  <span class="text-warning">
+                    <i class="fa-solid fa-star"></i>
+                    <span class="text-dark ms-1">4.5</span>
+                  </span>
+                </div>
+                <p class="fs-5 fw-bold text-success mb-3">$18.00</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="input-group input-group-sm" style="width: 100px">
+                    <button class="btn btn-outline-secondary" type="button">
+                      -
+                    </button>
+                    <input
+                      type="text"
+                      class="form-control text-center"
+                      value="1"
+                    />
+                    <button class="btn btn-outline-secondary" type="button">
+                      +
+                    </button>
+                  </div>
+                  <button class="btn btn-primary">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="position-relative ratio ratio-1x1">
+                <span class="badge position-absolute top-0 start-0 m-3"
+                  >-30%</span
+                >
+                <button
+                  class="btn position-absolute top-0 end-0 m-3 rounded-circle p-2"
+                >
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+                <img
+                  src="./Assets/IMGS/thumb-bananas.png"
+                  class="p-3 img-fluid object-fit-contain"
+                  alt="Product"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title h6">Sunstar Fresh Melon Juice</h5>
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <span class="text-muted small">1 Unit</span>
+                  <span class="text-warning">
+                    <i class="fa-solid fa-star"></i>
+                    <span class="text-dark ms-1">4.5</span>
+                  </span>
+                </div>
+                <p class="fs-5 fw-bold text-success mb-3">$18.00</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="input-group input-group-sm" style="width: 100px">
+                    <button class="btn btn-outline-secondary" type="button">
+                      -
+                    </button>
+                    <input
+                      type="text"
+                      class="form-control text-center"
+                      value="1"
+                    />
+                    <button class="btn btn-outline-secondary" type="button">
+                      +
+                    </button>
+                  </div>
+                  <button class="btn btn-primary">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--! Form  -->
+    <section class="py-5 discount-section">
+      <div class="container">
+        <div class="bg-light rounded-4 position-relative overflow-hidden">
+          <div class="row g-0">
+            <!-- Content Side -->
+            <div class="col-md-6 p-4 p-lg-5">
+              <span class="badge bg-warning text-dark mb-3"
+                >Limited Time Offer</span
+              >
+              <h2 class="display-5 fw-bold mb-3">
+                Get <span class="text-success">25% Discount</span> <br />on your
+                first purchase
+              </h2>
+              <p class="lead text-muted mb-4">
+                Subscribe to our newsletter and get exclusive offers, new
+                product updates, and seasonal discounts delivered to your inbox.
+              </p>
+            </div>
+
+            <!-- Form Side -->
+            <div class="col-md-6 bg-white p-4 p-lg-5">
+              <form>
+                <div class="mb-4">
+                  <label class="form-label">Full Name</label>
+                  <div class="input-group">
+                    <span class="input-group-text bg-light border-0">
+                      <i class="fa-regular fa-user text-muted"></i>
+                    </span>
+                    <input
+                      type="text"
+                      class="form-control border-0 bg-light py-3"
+                      placeholder="John Doe"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <label class="form-label">Email Address</label>
+                  <div class="input-group">
+                    <span class="input-group-text bg-light border-0">
+                      <i class="fa-regular fa-envelope text-muted"></i>
+                    </span>
+                    <input
+                      type="email"
+                      class="form-control border-0 bg-light py-3"
+                      placeholder="john@example.com"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <button type="submit" class="btn btn-success btn-lg w-100">
+                  Get My Discount
+                  <i class="fa-solid fa-arrow-right ms-2"></i>
                 </button>
               </form>
             </div>
           </div>
-          <div class="text-end d-none d-lg-block dropdown me-2">
-            <button class="border-0 bg-transparent d-flex flex-column g-2 lh-1" type="button">
-              <span class="fs-6 text-muted dropdown-toggle">Your Cart</span>
-              <span class="fs-5 fw-bold">$1290.00</span>
-            </button>
-          </div>
-        </nav>
+        </div>
       </div>
-    </header>
+    </section>
+    <!--! App  -->
+    <section class="py-5 my-5 app-section">
+      <div class="container">
+        <div
+          class="bg-success-subtle rounded-4 position-relative overflow-hidden"
+        >
+          <div class="row g-0 position-relative" style="z-index: 2">
+            <!-- App Image Side -->
+            <div class="col-lg-5 p-4 p-lg-5 d-flex align-items-center">
+              <img
+                src="./Assets/IMGS/phone.png "
+                class="img-fluid float-animation"
+                alt="FoodMart Mobile App"
+              />
+            </div>
+
+            <!-- Content Side -->
+            <div class="col-lg-7 p-4 p-lg-5">
+              <div class="py-lg-4">
+                <h2 class="display-5 fw-bold mb-4">
+                  Shop Smarter with
+                  <span class="text-success">FoodMart App</span>
+                </h2>
+                <p class="lead mb-4">
+                  Download our mobile app and experience seamless grocery
+                  shopping. Get exclusive app-only deals, track your orders in
+                  real-time, and enjoy a personalized shopping experience right
+                  at your fingertips.
+                </p>
+
+                <!-- App Store Buttons -->
+                <div class="d-flex flex-wrap gap-3">
+                  <a href="#" class="app-store-btn">
+                    <img
+                      src="./Assets/IMGS/google-play.jpg"
+                      alt="Download on App Store"
+                      height="50"
+                    />
+                  </a>
+                  <a href="#" class="app-store-btn">
+                    <img
+                      src="./Assets/IMGS/app-store.jpg"
+                      alt="Get it on Google Play"
+                      height="50"
+                    />
+                  </a>
+                </div>
+
+                <!-- Features -->
+                <div class="row g-4 mt-4">
+                  <div class="col-sm-6">
+                    <div class="d-flex align-items-center gap-3">
+                      <div class="bg-success text-white rounded-circle p-3">
+                        <i class="fa-solid fa-truck-fast"></i>
+                      </div>
+                      <div>
+                        <h5 class="mb-1">Fast Delivery</h5>
+                        <p class="mb-0 text-muted">Track orders in real-time</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="d-flex align-items-center gap-3">
+                      <div class="bg-success text-white rounded-circle p-3">
+                        <i class="fa-solid fa-tag"></i>
+                      </div>
+                      <div>
+                        <h5 class="mb-1">Best Deals</h5>
+                        <p class="mb-0 text-muted">App exclusive offers</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer  -->
+    <footer class="py-5 bg-light">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Brand Column -->
+          <div class="col-lg-4 col-md-6">
+            <div class="pe-lg-5">
+              <img
+                src="./Assets/IMGS/logo.png"
+                alt="FoodMart Logo"
+                class="mb-4"
+                height="40"
+              />
+              <p class="text-muted">
+                Your trusted partner for fresh groceries and quality products
+                delivered right to your doorstep.
+              </p>
+              <div class="mt-4">
+                <div class="d-flex gap-3">
+                  <a
+                    href="#"
+                    class="btn btn-outline-secondary rounded-circle facebook"
+                  >
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="btn btn-outline-secondary rounded-circle twitter"
+                  >
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="btn btn-outline-secondary rounded-circle instagram"
+                  >
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="btn btn-outline-secondary rounded-circle youtube"
+                  >
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-2 col-md-3 col-6">
+            <h6 class="mb-4">Quick Links</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none">About Us</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none">Shop Now</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none">Blog</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Customer Service -->
+          <div class="col-lg-2 col-md-3 col-6">
+            <h6 class="mb-4">Customer Service</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none">FAQs</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none">Shipping</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none">Returns</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-muted text-decoration-none"
+                  >Track Order</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="col-lg-4 col-md-6">
+            <h6 class="mb-4">Subscribe to Our Newsletter</h6>
+            <p class="text-muted">
+              Get updates about new products and special offers
+            </p>
+            <form class="mt-4">
+              <div class="input-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Your email address"
+                />
+                <button class="btn btn-success" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="row mt-5 pt-4 border-top">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="mb-md-0 text-muted">
+              © 2024 FoodMart. All rights reserved.
+            </p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <a href="#" class="text-muted text-decoration-none me-3"
+              >Privacy Policy</a
+            >
+            <a href="#" class="text-muted text-decoration-none"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="./Assets/JS/bootstrap.bundle.min.js"></script>
   </body>
 </html>
